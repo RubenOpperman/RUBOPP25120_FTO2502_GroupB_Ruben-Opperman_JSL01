@@ -3,12 +3,13 @@
     <meta />
     <meta />
     <link href="./output.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
 
-  <body>
+  <body class="grid grid-cols-1 h-auto max-w-full">
     <!-- Navigation Sidebar: Contains the logo, navigation links for boards, and theme toggle. -->
-    <nav>
+    <nav class="hidden">
       <div>
         <h4>ALL BOARDS (1)</h4>
         <button>Launch Career</button>
@@ -17,48 +18,72 @@
 
     <!-- Main Layout: Header with board title, add task button, and main content area for task columns. -->
     <div>
-      <header>
+      <header class="bg-white font-bold max-w-full">
         <div>
-          <h2>Launch Career</h2>
+          <h2 class="text-lg py-5 pl-10">Launch Career</h2>
         </div>
       </header>
 
-      <div>
-        <main>
+      <div class="bg-board flex justify-center">
+        <main class="flex flex-col">
           <!-- Task Columns: Display tasks grouped by status (TODO, DOING, DONE). -->
-          <div>
-            <div>
-              <span></span>
-              <h4>TODO</h4>
+          <div class="w-[85%] px-6 mx-auto">
+            <div class="flex py-7.5">
+              <span class="rounded-full w-4 h-4 bg-[#49C4E5] mr-3"></span>
+              <h4 class="text-label font-bold text-xs">TODO</h4>
             </div>
             <!-- Tasks container for TODO -->
-            <div>
-              <div>Launch Epic Career 🚀</div>
-              <div>Learn Data Structures and Algorithms 📚</div>
+            <div class="">
+              <div
+                class="bg-white text-sm font-bold mb-5 py-5 pl-5 rounded-md shadow-lg"
+              >
+                Launch Epic Career 🚀
+              </div>
+              <div
+                class="bg-white text-sm font-bold py-5 pl-5 rounded-md shadow-lg"
+              >
+                Learn Data Structures and Algorithms 📚
+              </div>
             </div>
           </div>
           <!-- DOING Column -->
-          <div>
-            <div>
-              <span></span>
-              <h4>DOING</h4>
+          <div class="w-[85%] px-6 mx-auto">
+            <div class="flex py-7.5">
+              <span class="rounded-full w-4 h-4 bg-[#8471F2] mr-3"></span>
+              <h4 class="text-label font-bold text-xs">DOING</h4>
             </div>
             <!-- Tasks container for DOING -->
-            <div>
-              <div>Master JavaScript 💛</div>
-              <div>Keep on Going 🏆</div>
+            <div class="">
+              <div
+                class="bg-white text-sm font-bold mb-5 py-5 pl-5 rounded-md shadow-lg shrink"
+              >
+                Master JavaScript 💛
+              </div>
+              <div
+                class="bg-white text-sm font-bold py-5 pl-5 rounded-md shadow-lg"
+              >
+                Keep on Going 🏆
+              </div>
             </div>
           </div>
           <!-- DONE Column -->
-          <div>
-            <div>
-              <span></span>
-              <h4>DONE</h4>
+          <div class="w-[85%] px-6 mx-auto">
+            <div class="flex py-7.5">
+              <span class="rounded-full w-4 h-4 bg-[#67E2AE] mr-3"></span>
+              <h4 class="text-label font-bold text-xs">DONE</h4>
             </div>
             <!-- Tasks container for DONE -->
-            <div>
-              <div>Contribute to Open Source Projects 🌐</div>
-              <div>Build Portfolio Projects 🛠️</div>
+            <div class="">
+              <div
+                class="bg-white text-sm font-bold mb-5 py-5 pl-5 rounded-md shadow-lg"
+              >
+                Contribute to Open Source Projects 🌐
+              </div>
+              <div
+                class="bg-white text-sm font-bold mb-5 py-5 pl-5 rounded-md shadow-lg"
+              >
+                Build Portfolio Projects 🛠️
+              </div>
             </div>
           </div>
         </main>
