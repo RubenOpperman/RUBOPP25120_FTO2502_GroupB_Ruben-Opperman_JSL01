@@ -1,31 +1,50 @@
 <html>
   <head>
-    <meta />
-    <meta />
+    <meta charset="UTF-8" />
     <link href="./output.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
 
-  <body class="grid grid-cols-1 h-auto max-w-full">
+  <body
+    class="grid grid-cols-1 sm:grid-cols-[300px_3fr] sm:grid-rows-2 h-auto max-w-full"
+  >
     <!-- Navigation Sidebar: Contains the logo, navigation links for boards, and theme toggle. -->
-    <nav class="hidden">
+    <nav
+      class="hidden sm:block sm:row-start-1 sm:row-end-3 sm:col-start-1 sm:col-end-2 border-r-[#E4EBFA] border-r-1"
+    >
+      <img
+        src="/assets/logo-light.svg"
+        class="mb-14 mt-8 ml-8 w-[150px] h-auto"
+        alt="Kanban logo"
+      />
       <div>
-        <h4>ALL BOARDS (1)</h4>
-        <button>Launch Career</button>
+        <h4 class="text-xs text-label font-bold pl-8 mb-5">ALL BOARDS (1)</h4>
+        <button
+          class="py-4 bg-button w-[270px] rounded-br-[100px] rounded-tr-[100px] text-white text-sm font-bold"
+        >
+          Launch Career
+        </button>
       </div>
     </nav>
 
     <!-- Main Layout: Header with board title, add task button, and main content area for task columns. -->
-    <div>
-      <header class="bg-white font-bold max-w-full">
-        <div>
-          <h2 class="text-lg py-5 pl-10">Launch Career</h2>
+    <div class="sm:col-start-2 sm:col-end-3 sm:row-start-1 sm:row-end-3">
+      <header
+        class="bg-white font-bold max-w-full border-b-[#E4EBFA] border-b-1"
+      >
+        <div class="flex items-center">
+          <img
+            src="/assets/favicon.svg"
+            alt="kanban icon"
+            class="sm:hidden block w-8 h-8 pl-4"
+          />
+          <h2 class="text-lg py-5 sm:pl-10 pl-4">Launch Career</h2>
         </div>
       </header>
 
-      <div class="bg-board flex justify-center">
-        <main class="flex flex-col">
+      <div class="bg-board flex justify-center sm:justify-start h-full">
+        <main class="flex flex-col sm:flex-row">
           <!-- Task Columns: Display tasks grouped by status (TODO, DOING, DONE). -->
           <div class="w-[85%] px-6 mx-auto">
             <div class="flex py-7.5">
@@ -55,7 +74,7 @@
             <!-- Tasks container for DOING -->
             <div class="">
               <div
-                class="bg-white text-sm font-bold mb-5 py-5 pl-5 rounded-md shadow-lg shrink"
+                class="bg-white text-sm font-bold mb-5 py-5 pl-5 rounded-md shadow-lg"
               >
                 Master JavaScript 💛
               </div>
